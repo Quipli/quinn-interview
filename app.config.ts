@@ -6,14 +6,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   slug: "emergency-alert-app",
   version: "1.0.0",
   orientation: "portrait",
-  icon: "./assets/icon.png",
   userInterfaceStyle: "automatic",
   scheme: "emergency-alert",
-  splash: {
-    image: "./assets/splash.png",
-    resizeMode: "contain",
-    backgroundColor: "#DC2626",
-  },
   assetBundlePatterns: ["**/*"],
   ios: {
     supportsTablet: false,
@@ -61,13 +55,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     [
       "expo-notifications",
       {
-        icon: "./assets/notification-icon.png",
         color: "#DC2626",
-        sounds: ["./assets/sounds/emergency-alert.wav"],
       },
     ],
     "expo-secure-store",
-    "expo-sqlite",
     [
       "expo-av",
       {
